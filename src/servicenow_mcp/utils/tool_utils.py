@@ -138,6 +138,24 @@ from servicenow_mcp.tools.incident_tools import (
 from servicenow_mcp.tools.incident_tools import (
     update_incident as update_incident_tool,
 )
+from servicenow_mcp.tools.case_tools import (
+    CreateCaseParams,
+    UpdateCaseParams,
+    ListCasesParams,
+    GetCaseParams,
+)
+from servicenow_mcp.tools.case_tools import (
+    create_case as create_case_tool,
+)
+from servicenow_mcp.tools.case_tools import (
+    update_case as update_case_tool,
+)
+from servicenow_mcp.tools.case_tools import (
+    list_cases as list_cases_tool,
+)
+from servicenow_mcp.tools.case_tools import (
+    get_case as get_case_tool,
+)
 from servicenow_mcp.tools.knowledge_base import (
     CreateArticleParams,
     CreateKnowledgeBaseParams,
@@ -349,6 +367,35 @@ def get_tool_definitions(
             str,  # Expects JSON string
             "List incidents from ServiceNow",
             "json",  # Tool returns list/dict, needs JSON dump
+        ),
+        # Case Tools
+        "create_case": (
+            create_case_tool,
+            CreateCaseParams,
+            str,
+            "Create a new customer service case in ServiceNow",
+            "str",
+        ),
+        "update_case": (
+            update_case_tool,
+            UpdateCaseParams,
+            str,
+            "Update an existing customer service case in ServiceNow",
+            "str",
+        ),
+        "list_cases": (
+            list_cases_tool,
+            ListCasesParams,
+            str,
+            "List customer service cases from ServiceNow",
+            "json",
+        ),
+        "get_case": (
+            get_case_tool,
+            GetCaseParams,
+            str,
+            "Get details of a specific customer service case",
+            "json",
         ),
         # Catalog Tools
         "list_catalog_items": (
