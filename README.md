@@ -175,6 +175,13 @@ The default `config/tool_packages.yaml` includes the following role-based packag
 4. **resolve_incident** - Resolve an incident in ServiceNow
 5. **list_incidents** - List incidents from ServiceNow
 
+#### Case Management Tools
+
+1. **create_case** - Create a new customer service case in ServiceNow
+2. **update_case** - Update an existing customer service case in ServiceNow
+3. **list_cases** - List customer service cases from ServiceNow
+4. **get_case** - Get details about a specific customer service case
+
 #### Service Catalog Tools
 
 1. **list_catalog_items** - List service catalog items from ServiceNow
@@ -308,6 +315,12 @@ Below are some example natural language queries you can use with Claude to inter
 - "Resolve incident INC0010001 with a note that the server was restarted"
 - "List all high priority incidents assigned to the Network team"
 - "List all active P1 incidents assigned to the Network team."
+
+#### Case Management Examples
+- "Create a new customer case for a billing issue"
+- "Update case CASE0012345 to set the priority to high"
+- "Show me details for case CASE0012345"
+- "List all open cases for account ACME"
 
 #### Service Catalog Examples
 - "Show me all items in the service catalog"
@@ -448,6 +461,7 @@ Additional documentation is available in the `docs` directory:
 - [Change Management](docs/change_management.md) - Detailed information about the Change Management tools
 - [Workflow Management](docs/workflow_management.md) - Detailed information about the Workflow Management tools
 - [Changeset Management](docs/changeset_management.md) - Detailed information about the Changeset Management tools
+- [Case Management](docs/case_management.md) - Detailed information about customer service case tools
 
 ### Troubleshooting
 
